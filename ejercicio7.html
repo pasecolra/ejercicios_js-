@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de notas</title>
+</head>
+<body>
+
+<script>
+let nota1;
+do {
+    nota1 = prompt("Por favor, introduce la nota 1:");
+    if (isNaN(parseFloat(nota1))) {
+        alert("Por favor, introduce un valor numérico para la nota 1.");
+    }
+} while (isNaN(parseFloat(nota1)));
+nota1 = parseFloat(nota1);
+
+let nota2;
+do {
+    nota2 = prompt("Por favor, introduce la nota 2:");
+    if (isNaN(parseFloat(nota2))) {
+        alert("Por favor, introduce un valor numérico para la nota 2.");
+    }
+} while (isNaN(parseFloat(nota2)));
+nota2 = parseFloat(nota2);
+
+let nota3;
+do {
+    nota3 = prompt("Por favor, introduce la nota 3:");
+    if (isNaN(parseFloat(nota3))) {
+        alert("Por favor, introduce un valor numérico para la nota 3.");
+    }
+} while (isNaN(parseFloat(nota3)));
+nota3 = parseFloat(nota3);
+
+let media = (nota1 + nota2 + nota3) / 3;
+
+let estado;
+if (media >= 3) {
+    estado = "aprobado";
+} else {
+    estado = "reprobado";
+}
+
+alert("La nota media del estudiante es: " + media.toFixed(2) + ". Está " + estado + ".");
+
+</script>
+
+</body>
+</html>
